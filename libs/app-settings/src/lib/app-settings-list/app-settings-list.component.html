@@ -1,0 +1,27 @@
+<div class="action-button">
+    <span class="new-button" (click)="createAppSetting()" >New App Setting</span>
+</div>
+<div class="app-setting-list">
+    <div class="app-setting-row" *ngFor="let setting of appSettings">
+        <span class="setting-id" (click)="editAppSetting(setting.id!)">
+            {{ setting.id }}
+        </span>
+        <span class="setting-key">
+            {{ setting.referenceKey }}
+        </span>
+        <span class="setting-value">
+            {{ setting.value }}
+        </span>
+        <span class="setting-description">
+            {{ setting.description }}
+        </span>
+        <span class="setting-type">
+            {{ setting.type }}
+        </span>
+        <span>
+            <button matButton (click)="editAppSetting(setting.id!)">
+                Edit
+            </button>
+        </span>
+    </div>
+</div>

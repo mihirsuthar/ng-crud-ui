@@ -1,0 +1,28 @@
+<div class="app-setting-form-container">
+
+    <div class="app-setting-form" [formGroup]="formGroup">
+        <h1>{{ pageMode === 'create' ? 'New' : 'Edit' }} App Setting</h1>
+        <mat-form-field>
+            <mat-label>Reference Key</mat-label>
+            <input matInput formControlName="referenceKey">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Value</mat-label>
+            <input matInput formControlName="value">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Type</mat-label>
+            <input matInput formControlName="type">
+        </mat-form-field>
+
+        <div class="form-actions">
+            <span class="cancel-button" (click)="cancel()">Cancel</span>
+            <span class="save-button" (click)="pageMode === 'create' ? save() : edit()">Save</span>
+        </div>
+    </div>
+
+</div>

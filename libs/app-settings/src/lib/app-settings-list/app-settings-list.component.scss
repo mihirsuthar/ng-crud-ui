@@ -1,0 +1,40 @@
+:host {
+    height: 100%;
+    width: 100%;
+}
+
+.action-button {
+    min-height: 40px;
+    width: 100%;
+
+    .new-button {
+        color: #ffffff;
+        background: #0149f1;
+        padding: 10px;
+        border-radius: 5px;
+        float: right;
+        cursor: pointer;
+    }
+}
+
+.app-setting-list {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+
+    .app-setting-row {
+        border-radius: 5px;
+        padding: 0px 20px;
+        min-height: 40px;
+        width: calc(100% - 40px);
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .app-setting-row:hover {
+        background: #d6e2ff;
+    }
+}

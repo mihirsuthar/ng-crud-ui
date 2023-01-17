@@ -1,30 +1,30 @@
 {
-  "name": "ng-crud-e2e",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/ng-crud-e2e/src",
-  "projectType": "application",
-  "targets": {
-    "e2e": {
-      "executor": "@nrwl/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/ng-crud-e2e/cypress.config.ts",
-        "devServerTarget": "ng-crud:serve:development",
-        "testingType": "e2e"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "ng-crud:serve:production"
+    "name": "ng-crud-e2e",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/ng-crud-e2e/src",
+    "projectType": "application",
+    "targets": {
+        "e2e": {
+            "executor": "@nrwl/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/ng-crud-e2e/cypress.config.ts",
+                "devServerTarget": "ng-crud:serve:development",
+                "testingType": "e2e"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "ng-crud:serve:production"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/ng-crud-e2e/**/*.{js,ts}"]
+            }
         }
-      }
     },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/ng-crud-e2e/**/*.{js,ts}"]
-      }
-    }
-  },
-  "tags": [],
-  "implicitDependencies": ["ng-crud"]
+    "tags": [],
+    "implicitDependencies": ["ng-crud"]
 }

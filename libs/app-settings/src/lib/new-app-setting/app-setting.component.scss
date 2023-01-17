@@ -1,0 +1,37 @@
+.app-setting-form-container {
+    width: 100%;
+    width: 100%;
+
+    .app-setting-form {
+        width: 50%;
+        padding: 0 20%;
+        display: flex;
+        flex-direction: column;
+
+        .form-actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            .save-button {
+                padding: 10px;
+                border-radius: 5px;
+                color: #ffffff;
+                background: #0149f1;
+                cursor: pointer;
+                margin-left: 20px;
+            }
+
+            .cancel-button {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #bb0404;
+                color: #bb0404;
+                background: #ffffff;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
