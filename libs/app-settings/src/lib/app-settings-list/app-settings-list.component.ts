@@ -1,4 +1,3 @@
-import { environment } from './../../../../../apps/ng-crud/src/environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppSetting } from '@ng-crud-ui/app-cilents';
@@ -15,8 +14,7 @@ export class AppSettingsListComponent implements OnInit {
     appSettings: AppSetting[] = [];
 
     constructor(public facade: AppSettingsStateFacade,
-        private router: Router,
-        private _snackBar: MatSnackBar) {
+        private router: Router) {
     }
 
     ngOnInit() {
@@ -27,11 +25,7 @@ export class AppSettingsListComponent implements OnInit {
 
     initSubscriptions() {
 
-        if(environment.production) {
-            this._snackBar.open('Production environment', 'Ok');
-        } else {
-            this._snackBar.open('Development environment', 'Ok');
-        }
+
 
         this.facade.appSettingsList$.subscribe((appSettings) => {
             if(appSettings && appSettings.length > 0) {

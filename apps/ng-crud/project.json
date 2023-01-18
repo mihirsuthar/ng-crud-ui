@@ -24,6 +24,12 @@
             },
             "configurations": {
                 "production": {
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/ng-crud/src/environments/environment.ts",
+                            "with": "apps/ng-crud/src/environments/environment.prod.ts"
+                        }
+                    ],
                     "budgets": [
                         {
                             "type": "initial",
@@ -47,7 +53,7 @@
                     "namedChunks": true
                 }
             },
-            "defaultConfiguration": "production"
+            "defaultConfiguration": "development"
         },
         "serve": {
             "executor": "@angular-devkit/build-angular:dev-server",
