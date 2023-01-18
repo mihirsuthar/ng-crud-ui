@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'http://localhost:6666'
+    apiUrl: 'https://dotnet6webapicrud.azurewebsites.net'
   };
